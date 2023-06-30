@@ -1,37 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import Card from '../Components/Card' 
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import Card from '../Components/Card'
+import { useGlobalContext } from '../Components/utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
 
-  const [dentists, setDentists] = useState([{}])
-
-  const url = 'https://jsonplaceholder.typicode.com/users'
-
-  useEffect(() => {
-    axios(url)
-    .then((res) => setDentists(res.data))
-  }, [])
-
-  console.log(dentists);
+  const { state } = useGlobalContext();
 
   return (
-    <main className="home" >
-      <h1>Home</h1>
+    <main className={`home ${state.theme}`} >
+      {/* <h1>Home</h1> */}
       <div className='card-grid'>
-        {dentists.map((dentist) => 
-          <Link key={dentist.id} to={`/detail/${dentist.id}`}>
-            <div className='card'>
-              <img className='card' src="../../images/doctor.jpg" alt={dentist.name} />
-              <h3>{dentist.name}</h3>
-              <p>{dentist.username}</p>
-              <img className='favButton' src="../../favicon.ico" />
-            </div>
-          </Link>
-        )}
+        {state.data.map((dentist) => <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} />)}
       </div>
     </main>
   )

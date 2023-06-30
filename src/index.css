@@ -11,15 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
-  border: none;
-  width: 20%;
+  border: 0.1px solid ;
+  width: 100%;
   cursor: pointer;
+  border-radius: 0.3cm;
 }
 
-h1{
+.favButton:hover {
+  background-color: #dddddd;
+}
+
+h1, h4, .card p{
   text-align: center;
 }
 
@@ -76,8 +82,9 @@ form{
   flex-direction: column;
   align-items: center;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 0.4cm;
 }
 
 .card:hover{
@@ -92,6 +99,13 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+.card-img {
+  width: 100%; /* Ajustar la imagen al ancho completo del componente */
+  height: auto; /* Mantener la relación de aspecto original de la imagen */
+  object-fit: cover; /* Ajustar la imagen dentro del contenedor sin deformarla */
+  border-radius: 0.4cm;
 }
 
 table {

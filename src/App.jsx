@@ -6,10 +6,10 @@ import { useGlobalContext } from "./Components/utils/global.context";
 
 function App() {
 
-  const { themeClass } = useGlobalContext();
+  const { state } = useGlobalContext();
 
   return (
-      <div className={`App ${themeClass}`}>
+      <div className={`App ${state.theme}`}>
           <Navbar/>
           <Outlet/>
           <Footer/>

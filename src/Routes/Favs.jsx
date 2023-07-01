@@ -11,7 +11,7 @@ const Favs = () => {
   // useEffect(() => {}, [])
 
   return (
-    <div className={state.theme}>
+    <div>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}

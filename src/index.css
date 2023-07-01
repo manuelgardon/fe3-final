@@ -13,7 +13,6 @@ code {
 }
 
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: 0.1px solid ;
   width: 100%;
@@ -31,9 +30,8 @@ h1, h4, .card p{
 
 nav{
   display: flex;
-  width: 80vw;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 1rem 5rem ;
 }
 
 a{
@@ -53,7 +51,6 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
   margin-top: 2rem;
 }
@@ -81,7 +78,7 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 18%;
   padding: 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
   border-radius: 0.4cm;

@@ -62,7 +62,7 @@ const Form = () => {
         <button>Submit</button>
       </form>
       {error && <div style={{color:'red', textAlign:'center'}}>Por favor verifique su información nuevamente</div>}
-      {messageSuccess && <div style={{textAlign:'center'}}>Gracias {state.user.name}, te contactaremos cuando antes vía mail</div>}
+      {messageSuccess && <div style={{textAlign:'center'}}>Gracias {state.user.name}, te contactaremos cuanto antes vía mail</div>}
     </div>
   );
 };
